@@ -1,0 +1,291 @@
+/* Component styles */
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    white-space: nowrap;
+}
+
+.btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn--primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn--primary:hover:not(:disabled) {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn--secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.btn--secondary:hover:not(:disabled) {
+    background-color: #545b62;
+    border-color: #545b62;
+}
+
+.btn--danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.btn--danger:hover:not(:disabled) {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.btn--small {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    min-height: 36px;
+}
+
+/* Form elements */
+.form {
+    padding: 1.5rem;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-height: 44px;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.input--error,
+.select--error {
+    border-color: #dc3545;
+}
+
+.input--error:focus,
+.select--error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.input--search {
+    padding-left: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0.75rem center;
+    background-size: 16px;
+}
+
+.select--small {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    min-height: 36px;
+}
+
+.form__error {
+    display: none;
+    color: #dc3545;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.form__actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Employee card */
+.employee-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.employee-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.employee-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.employee-card__name {
+    color: #333;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.employee-card__id {
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.employee-card__details {
+    margin-bottom: 1.5rem;
+}
+
+.employee-card__details p {
+    margin: 0 0 0.5rem 0;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.employee-card__email {
+    color: #007bff !important;
+    font-weight: 500;
+}
+
+.employee-card__department,
+.employee-card__role {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.employee-card__actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.notification--show {
+    transform: translateX(0);
+}
+
+.notification--success {
+    background-color: #28a745;
+}
+
+.notification--error {
+    background-color: #dc3545;
+}
+
+.notification--info {
+    background-color: #17a2b8;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 4px;
+}
+
+.badge--primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.badge--secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.badge--success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge--danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.badge--warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge--info {
+    background-color: #17a2b8;
+    color: #fff;
+}
